@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Autor" content="Óscar González-Anleo Lozano">
+    <meta name="description" content="Página informativa-reflexiva sobre la localidad de Badajoz y sus habitantes">
+    <title>Badajoz el lugar donde la mente descansa</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/favicon.webp" type="image/webp">
+
+</head>
+<body>
+    <header>
+        <h1>Badajoz: El lugar donde la mente descansa</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Su historia</a></li>
+            <li><a href="tradiciones.html">Fiestas y tradiciones</a></li>
+            <li><a href="datosEstadisticos.html">Datos estadisticos</a></li>
+            <li><a href="informacionTuristica.html">Turismo</a></li>
+            <li><a href="contenidoMultimedia.html">Ver Badajoz</a></li>
+            <li><a href="contacto.html">Contactos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Contacta con nosotros</h2>
+        <p>Si necesitas más información sobre Badajoz o requieres de alguno de los servicios que prestamos, 
+            no dude en rellenar el siguiente formulario con su cuestión y nos pondremos en contacto con usted lo antes posible.</p>
+        <section>
+            <form name="Contacto" action="(aqui iria url de un servidor para guardar los datos)" method="post">
+                <fieldset>
+                    <legend>Información De Contacto</legend>
+                    <p>
+                        <label for="nombre_Usuario">Nombre:</label>
+                        <input type="text" id="nombre_Usuario" name="nombreUsuario" placeholder="PepitoJuan39">
+                    </p>
+                    <p>
+                        <label for="email_Usuario">Correo Electrónico:</label>
+                        <input type="email" id="email_Usuario" name="emailUsuario" placeholder="badajoz@gmail.com">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Tu consulta</legend>
+                    <p>
+                        <label for="descripcion_Cuestion">Plantea tu cuestión:</label> <br>
+                        <textarea  id="descripcion_Cuestion" name="descripcionCuestion" placeholder="Comenta aquí tu cuestión"></textarea>
+                    </p>
+                </fieldset>
+                    <p>
+                        <button type="submit">Enviar Datos Contacto</button>
+                        <button type="reset">Eliminar Datos</button>
+                    </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Para saber más puede visitar nuestras otras redes sociales:</p>
+            <ul>
+                <li><a href="https://www.instagram.com/turismoprovinciabadajoz/">Instagram Turismo Badajoz</a></li>
+                <li><a href="https://www.facebook.com/aytobadajoz/">Facebook Ayuntamiento Badajoz</a></li>
+                <li><a href="https://x.com/crobadajoz">X-Twitter Noticias Badajoz</a></li>
+            </ul>
+        <p>Agradecimientos especiales a: el profesor que me va a poner un 10 en esta tarea :D </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* Configuración de las variables de los colores que vamos a útilizar*/
+:root {
+    --color-vino: #6b1b1b;         
+    --negro-profundo: #1a1a1a;     
+    --gris-oscuro: #333333;        
+    --gris-medio: #7a7a7a;         
+    --gris-claro: #f4f4f4;         
+    --blanco-puro: #ffffff;
+}
+
+/* Usamos el elemento * para seleccionar todo el documento y lo reseteamos*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Esto es para que los navegadores no agregen tamaño a las cajas*/
+}
+
+/*Definimos como queremos que se vean los textos*/
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /*Orden de preferencia de fuentes en caso de que no esten disponibles*/
+    line-height: 1.6;
+    background-color: var(--gris-claro);
+    color: var(--negro-profundo);
+}
+
+/* Cabecera */
+header {
+    background-color: var(--negro-profundo);
+    color: var(--blanco-puro);
+    padding: 3rem 1rem;  /*Usamos rem que es la medida del tamaño del texto predeterminado, si no se configura es de 16px en los navegadores convencionales, es más flexible que los px*/
+    text-align: center;
+    border-bottom: 4px solid var(--color-vino);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px; /*Espacio entre letras*/
+}
+
+/*Navegación*/
+nav {
+    background-color: var(--gris-oscuro);
+    position: sticky; /*Para que cuando se haga scroll se quede*/
+    top: 0; /*no dejar espacios arriba*/
+    z-index: 1000; /*la capa en la que se encuentra, 1000 es que va a estar por encima de todo lo que no supere esa capa, en este caso por encima de todo*/
+}
+
+nav ul {
+    list-style: none; /*Solo texto sin los puntitos*/
+    display: flex; /*Pone los elementos en horizontal*/
+    justify-content: center; /*centrarlos*/
+    flex-wrap: wrap; /*Esto lo que hace es que si no caben de forma horizontal, se expandira hacia abajo haciendo otra linea*/
+}
+
+nav ul li a {
+    display: block; /*Con esto no tienes que acertar al texto, con darle a la caja funciona*/
+    color: var(--gris-claro);
+    text-decoration: none; /*Quita el subrayado azul tipico de los enlaces*/
+    padding: 1.2rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.4s linear; /*Tema transiciones y cuanto tiempo le lleva realizarlas, probé con ease pero daba un tiron raro al final*/
+}
+
+/*Hover es cuando el raton pasa por encima*/
+nav ul li a:hover {
+    background-color: var(--color-vino);
+    color: var(--blanco-puro); /*Asi el texto resalta mas por que pasa de gris claro a blanco*/
+}
+
+/* Cuerpo */
+main {
+    max-width: 1000px; /*Esto es principalmente para pantallas muy grandes, los textos no se conviertan en una unica linea 
+                        o tengas que llevar la vista de un lado a otro de la pantalla. Estoy limitando la anchura*/
+    width: 90%;         /*Aqui hago que el ancho va a ocupar el 90% de la pantalla dejando ver el fondo de la página*/
+    margin: 40px auto;
+    background: var(--blanco-puro);
+    padding: 40px;
+    border-radius: 8px; /*Redondea los bordes de la caja*/
+}
+
+h2, h3 {
+    color: var(--color-vino);
+    margin-bottom: 20px;
+    margin-top: 30px;
+    border-bottom: 2px solid var(--gris-claro);
+    border-top: 2px solid var(--gris-claro);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Formulario*/
+fieldset {
+    border: 1px solid var(--gris-medio);
+    padding: 25px;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 15px;
+    color: var(--color-vino);
+    text-transform: uppercase; /*Ponerlo en mayúsculas*/
+    font-size: 0.9rem;
+}
+
+label {
+    font-weight: 600;
+    color: var(--gris-oscuro);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid var(--gris-medio);
+    border-radius: 3px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-vino);
+}
+
+button {
+    background-color: var(--negro-profundo);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; /*En vez de que te aparezca el raton, te aparece la manita*/
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    background-color: var(--color-vino);
+}
+
+button:hover {
+    opacity: 70%;
+}
+
+/* Pie de página*/
+footer {
+    background-color: var(--negro-profundo);
+    color: var(--gris-medio);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 60px;
+}
+
+footer a {
+    color: var(--blanco-puro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-vino);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+/*multimedia*/
+
+img {
+    max-width: 80%;
+    max-height: 50%;
+    display: block; /*quita el espacio que dejan las imagenes abajo*/
+    margin: auto;
+    margin-top: 1rem;
+    border-style: outset;
+    padding: 1rem;
+    background-color: var(--gris-oscuro);
+    z-index: 900;
+}
+
+figcaption {
+    font-style: italic; /*Cursiva*/
+    text-align:center;   
+    padding-top: 2px;
+    margin-bottom: 1rem;
+}
+
+iframe {
+    max-width: 90%;
+    max-height: 70%;
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--gris-oscuro);
+}
+
+#mapaInteractivo {
+    max-width: 100%;
+    max-height: 60rem;
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+a {
+    color: var(--color-vino);
+}
+
+table {
+    margin: 1rem auto;
+    border-collapse: collapse; /* Une los bordes para que sea una sola línea */
+}
+
+th {
+    padding: 1rem 1rem;       /* Esto separa el texto de las paredes de la celda */
+    text-align: center;       /* Centra el texto dentro de la celda */
+    border: 1px solid #ddd;   /* Una línea fina para delimitar */
+    background-color: var(--gris-oscuro);
+    color: var(--blanco-puro);
+}
+
+td {
+    padding: 1rem 1rem;       /* Esto separa el texto de las paredes de la celda */
+    text-align: center;       /* Centra el texto dentro de la celda */
+    border: 1px solid #ddd;   /* Una línea fina para delimitar */
+
+}
