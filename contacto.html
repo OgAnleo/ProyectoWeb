@@ -49,11 +49,34 @@
                         <label for="descripcion_Cuestion">Plantea tu cuestión:</label> <br>
                         <textarea  id="descripcion_Cuestion" name="descripcionCuestion" placeholder="Comenta aquí tu cuestión"></textarea>
                     </p>
+
                 </fieldset>
+                <fieldset>
+                    <legend>¿Cómo nos has conocido?</legend>
+                    <p>Selecciona una de las siguientes opciones:</p>
+                    <p>
+                        <input type="radio" id="opcion_web" name="conocidoMetodo" value="busqueda_web" checked>
+                        <label for="opcion_web">Búsqueda en la web (Google, Bing...)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="opcion_redes" name="conocidoMetodo" value="redes_sociales">
+                        <label for="opcion_redes">Redes Sociales (Instagram, Facebook...)</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="opcion_amigo" name="conocidoMetodo" value="recomendacion">
+                        <label for="opcion_amigo">Recomendación de un amigo o conocido</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="opcion_otros" name="conocidoMetodo" value="otros">
+                        <label for="opcion_otros">Otros medios</label>
+                    </p>
+                </fieldset>
+                <fieldset>
                     <p>
                         <button type="submit">Enviar Datos Contacto</button>
                         <button type="reset">Eliminar Datos</button>
                     </p>
+                </fieldset>
             </form>
         </section>
     </main>
